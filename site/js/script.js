@@ -96,7 +96,7 @@ let constructDeckModal = async () => {
   //Carrega a lista anterior de cartas selecionadas
   previousDeckList.forEach(card => {
     const itemList = document.createElement('li');
-    itemList.innerHTML = `<a href="card_details.html?id=${card.cardID}">${card.cardName}</a>`;
+    itemList.innerHTML = `<a href="card_details.html?id=${card.cardID}&&v=true">${card.cardName}</a>`;
     deckUnList.appendChild(itemList);
   });
 
