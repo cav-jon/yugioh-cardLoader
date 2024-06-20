@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Yu-gi-oh! Card Viewer 1.0</title>
+  </head>
+  <body>
+    <div id="card_view" class="container">
+      <h1>Yu-gi-oh - Visualizador de cartas v.1.0</h1>
+      <div class="card-panel">
+        <div class="row">
+          <div class="col s4">
+            <img
+              class="responsive-img"
+              id="card_img"
+              src="https://orig10.deviantart.net/69f2/f/2016/289/4/1/ygo_card_backing__final__by_icycatelf-dal6wsb.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="card-panel col s8">
+            <p id="card_name">Nome: Lorem Ipsum</p>
+            <p id="card_type">Tipo: Lorem</p>
+            <p id="card_desc">
+              Descrição: Mussum Ipsum, cacilds vidis litro abertis.
+              Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
+              gostis. Leite de capivaris, leite de mula manquis sem cabeça.
+              Admodum accumsan disputationi eu sit. Vide electram sadipscing et
+              per. Posuere libero varius. Nullam a nisl ut ante blandit
+              hendrerit. Aenean sit amet nisi.
+            </p>
+            <p id="card_atk">ATK: ????</p>
+            <p id="card_def">DEF: ????</p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        onclick="window.location.replace('index.html')"
+        id="btn-voltar"
+        class="deep-orange darken-2 btn-large"
+      >
+        Voltar
+      </button>
+      <button
+        onclick="addToDeck()"
+        id="btn-adicionar"
+        class="green right darken-2 btn-large modal-trigger"
+        href="#modal1"
+      >
+        Adicionar ao deck
+      </button>
+
+      <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content center">
+          <h4>Adicionado ao Deck!</h4>
+          <ul id="deck-list">
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a
+            href="index.html"
+            class="modal-close waves-effect waves-green btn-flat"
+          >
+            Voltar</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      cardDetail();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+POST http://localhost:3333/card
+Content-Type: application/json
+
+{
+        "cardID" : 86165817
+}
+
+###
+GET http://localhost:3333/deck/
+
