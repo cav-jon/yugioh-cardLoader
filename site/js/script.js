@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   var instances = M.Modal.init(elems);
 });
 
-const url = "http://localhost:3333/";
+const url = "http://localhost:4000/";
 
 let getCard = () => {
   // Limpa a seleção de cartas anteriores e remove a classe pulsar do botão

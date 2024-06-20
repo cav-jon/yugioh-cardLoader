@@ -19,7 +19,7 @@ server.use((req, res, next) => {
 server.use(express.json());
 
 //Inicializa o servidor
-server.listen(3333);
+server.listen(4000);
 
 server.get("/", (req, res) => {
   res.send("200 OK");
